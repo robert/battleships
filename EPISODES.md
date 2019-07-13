@@ -14,4 +14,15 @@
 # EPISODE 3
 
 [x] Decide how to represent Battleships in code
-[] Render a board with Battleships
+[x] Render a board with Battleships
+
+# EPISODE 4
+
+[x] Decide how to represent the overall state of the game
+[x] Work out when a shot was a hit/miss
+
+# EPISODE 5
+
+[] Render an "admin" board with both battleships and shots
+[] Hook our player input up to our game engine
+[] End the game when all battleships have been destroyed
