@@ -9,4 +9,9 @@
 [x] Parse into x and y co-ordinates
 
 [x] Render an empty board
-[] Render a board with shots
+[x] Render a board with shots
+
+# EPISODE 3
+
+[x] Decide how to represent Battleships in code
+[] Render a board with Battleships
