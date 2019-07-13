@@ -23,6 +23,6 @@
 
 # EPISODE 5
 
-[] Render an "admin" board with both battleships and shots
-[] Hook our player input up to our game engine
-[] End the game when all battleships have been destroyed
+[x] Render an "admin" board with both battleships and shots
+[x] Hook our player input up to our game engine
+[x] End the game when all battleships have been destroyed
