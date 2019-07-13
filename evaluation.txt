@@ -1,0 +1,18 @@
+# GOOD
+
+* Clean separation between components
+* Nice "interface" for specifying AI players
+* Easily "injectable" functions for rendering and announcing
+
+# TO BE IMPROVED
+
+* Still not quite sure how best to specify the position of a battleship
+* Still not quite sure about the relationship between a Player and a GameBoard
+* Missing a lot of error validation (eg. what if you shoot somewhere you've already shot?)
+
+# PROCESS
+
+* Start simple
+* Don't write code to solve problems you don't have yet
+* Think carefully about what each part of your code is "responsible" for. Where possible, don't blur the lines
+* Leave yourself flexibility to change your mind

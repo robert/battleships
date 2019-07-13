@@ -32,3 +32,14 @@
 [x] Add in a second player
 [x] Alternate turns
 [x] Print the winner at the end
+
+# EPISODE 7
+
+[x] Random AI player
+[x] More intricate board renderings <---->
+
+# EPISODE 8
+
+[x] More detailed and neat "announcements"
+[] Secret way for players to arrange their battleships
+[] Intelligent AI that looks at where current ships are and shoots next to them
