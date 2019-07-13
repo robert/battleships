@@ -26,3 +26,9 @@
 [x] Render an "admin" board with both battleships and shots
 [x] Hook our player input up to our game engine
 [x] End the game when all battleships have been destroyed
+
+# EPISODE 6
+
+[x] Add in a second player
+[x] Alternate turns
+[x] Print the winner at the end

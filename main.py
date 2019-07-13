@@ -1,3 +1,4 @@
+import copy
 
 class GameBoard(object):
 
@@ -101,21 +102,41 @@ def render(game_board, show_battleships=False):
 if __name__ == "__main__":
     battleships = [
         Battleship.build((1,1), 2, "N"),
-        Battleship.build((5,8), 5, "N"),
-        Battleship.build((2,3), 4, "E")
+        # Battleship.build((5,8), 5, "N"),
+        # Battleship.build((2,3), 4, "E")
     ]
 
-    game_board = GameBoard(battleships, 10, 10)
+    # https://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/
+    game_boards = [
+        GameBoard(battleships, 10, 10),
+        GameBoard(copy.deepcopy(battleships), 10, 10)
+    ]
+    player_names = [
+        "Frank",
+        "Alice",
+    ]
+
+    offensive_idx = 0
     while True:
+        # defensive player is the non-offensive one
+        defensive_idx = (offensive_idx + 1) % 2
+
+        defensive_board = game_boards[defensive_idx]
+
+        print("%s YOUR TURN!" % player_names[offensive_idx])
         inp = input("Where do you want to shoot?\n")
         # TODO: deal with invalid input
         xstr, ystr = inp.split(",")
         x = int(xstr)
         y = int(ystr)
 
-        game_board.take_shot((x,y))
-        render(game_board)
+        defensive_board.take_shot((x,y))
+        render(defensive_board)
 
-        if game_board.is_game_over():
-            print("YOU WIN!")
+        if defensive_board.is_game_over():
+            print("%s WINS!" % player_names[offensive_idx])
             break
+
+        # offensive player becomes the previous defensive
+        # player
+        offensive_idx = defensive_idx
